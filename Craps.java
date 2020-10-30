@@ -30,10 +30,7 @@ public class Craps{
 
                 int point = 0;
                 int sum = 0;
-                while (point != 7 || sum != num) {
-                    point = rand.nextInt(13-1) + 1;
-                    System.out.println("Sum of next roll = " + point + ". ");
-                    sum = sum + point;
+                while (point != 7){
                     point = rand.nextInt(13-1) + 1;
                     System.out.println("Sum of next roll = " + point + ". ");
                     sum = sum + point;
