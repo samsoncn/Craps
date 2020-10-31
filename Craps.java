@@ -32,11 +32,11 @@ public class Craps{
                 int sum = 0;
                 while (point != 7){
                     point = rand.nextInt(13-1) + 1;
-                    System.out.println("Sum of next roll = " + point + ". ");
+                    // System.out.println("Sum of next roll = " + point + ". ");
                     sum = sum + point;
 
                     if (point == 7) {
-                        System.out.print("Player loses.");
+                        System.out.print("Sum of next roll = " + point + ".   Player loses.");
                         System.out.println();
                         System.out.println();
                         System.out.print("Do you want to play again? ");
@@ -44,12 +44,16 @@ public class Craps{
                         ans = scan.nextLine();
                     }
                     else if (sum == num) {
-                        System.out.print("Player wins.");
+                        System.out.print("Sum of next roll = " + point + ".   Player wins.");
                         System.out.println();
                         System.out.println();
                         System.out.print("Do you want to play again? ");
 
                         ans = scan.nextLine();
+                    }
+                    else {
+                        System.out.println("Sum of next roll = " + point + ". ");
+                        // System.out.println("Sum = " + sum + ". ");
                     }
                 }
             }
